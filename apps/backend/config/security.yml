@@ -1,0 +1,24 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/08-Security
+index:
+  is_secure: false
+
+default:
+  is_secure:   false
+  # credentials: admin
+
+all:
+  is_secure: true
+  
+  .setting:
+  # enabled_modules: [default, sfGuardAuth]
+  
+  .actions:
+    # login_module: default
+    # login_action: login
+security:
+
+  access_control:
+    - { path: ^/backend, roles: IS_AUTHENTICATED_FULLY }
+
+
